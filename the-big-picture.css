@@ -1,0 +1,40 @@
+/*!
+ * Start Bootstrap - The Big Picture (https://startbootstrap.com/template-overviews/the-big-picture)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-the-big-picture/blob/master/LICENSE)
+ */
+body.background_home {
+  background: url('img/mainvis_big.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+@media (max-width:575px) {
+    body.background_home  {
+  background: url('img/mainvis_small.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+    }
+}
+
+body.background_other {
+  background: url('img/mainvis_big_h.png') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+
+@media (max-width:575px) {
+    body.background_other  {
+  background: url('img/mainvis_small_h.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+    }
+}
