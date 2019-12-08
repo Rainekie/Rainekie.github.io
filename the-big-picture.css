@@ -11,7 +11,7 @@ body.background_home {
   -o-background-size: cover;
 }
 
-@media (max-width:575px) {
+@media (max-width:576px) {
     body.background_home  {
   background: url('img/mainvis_small.png');
   -webkit-background-size: cover;
@@ -29,7 +29,7 @@ body.background_other {
   -o-background-size: cover;
 }
 
-@media (max-width:575px) {
+@media (max-width:576px) {
     body.background_other  {
   background: url('img/mainvis_small_h.png');
   -webkit-background-size: cover;
