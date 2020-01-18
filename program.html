@@ -17,33 +17,7 @@
   <link href="style.css" rel="stylesheet">
     
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script type="text/javascript">
-            new Vue({
-          el: '#app',
-          data () {
-            return {
-              message: 'book list',
-              books: null,
-            }
-          },
-          mounted () {
-            fetch(
-              'https://script.google.com/macros/s/AKfycbwM8H6Ga921WyFDV09i4Dwh3LNCMqa5du3SXiGPXGuh9kivCNQ/exec',
-            )
-              .then(res => res.json())
-              .then(
-              result => {
-                this.books = result
-              },
-              error => {
 
-              },
-            );
-          }
-        })
-    </script>
-    
-    
 </head>
 
 <body class="background_other">
@@ -81,15 +55,15 @@
 
       <!-- Page Content -->
   <section>
+  <div id="app">
     <div class="container-fluid mt-5">
       <div class="row">
           <div class="col-md-2"></div>
           <div class="col-md-8">
-                <div id="app">
                 <p class="font-weight-bold">{{ message }}</p>
                  <div class="book" v-for="book in books">
                   <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                    <a class="list-group-item flex-column">
                       <div class="d-flex w-100 justify-content-between">
                         <h5 class="mb-1">{{book.name}}</h5>
                         <small>{{book.project}}</small>
@@ -98,19 +72,45 @@
                       <small>{{book.content}}</small>
                     </a>
                   </div>
+                     <p class="mb-1"></p>
                   </div>
                 </div>
-          </div>
           <div class="col-md-2"></div>
 
       </div>
     </div>
+  </div>
   </section>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+      <script type="text/javascript">
+            new Vue({
+          el: '#app',
+          data () {
+            return {
+              message: 'Program',
+              books: null,
+            }
+          },
+          mounted () {
+            fetch(
+              'https://script.google.com/macros/s/AKfycbwM8H6Ga921WyFDV09i4Dwh3LNCMqa5du3SXiGPXGuh9kivCNQ/exec',
+            )
+              .then(res => res.json())
+              .then(
+              result => {
+                this.books = result
+              },
+              error => {
+
+              },
+            );
+          }
+        })
+    </script>
 
     
 </body>
