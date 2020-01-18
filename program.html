@@ -1,19 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html>
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="Rai Sato">
-    
-  <meta name="twitter:card" content="summary" /> <!--①-->
-  <meta name="twitter:site" content="@onkan_sotsuten" /> <!--②-->
-  <meta property="og:url" content="http://www.onkansotsuten.com/" /> <!--③-->
-  <meta property="og:title" content="音環卒展2020" /> <!--④-->
-  <meta property="og:description" content="この春に「音楽学部：音楽環境創造科」を卒業、「大学院：音楽音響創造」を修了する学生たちが、本学で学んだ成果を制作作品・研究論文として、発表します。" /> <!--⑤-->
-  <meta property="og:image" content="http://www.onkansotsuten.com/2020/img/twitter.png" /> <!--⑥-->
 
   <title>音環卒展2020</title>
 
@@ -23,12 +15,39 @@
   <!-- Custom styles for this template -->
   <link href="the-big-picture.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+    
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script type="text/javascript">
+            new Vue({
+          el: '#app',
+          data () {
+            return {
+              message: 'book list',
+              books: null,
+            }
+          },
+          mounted () {
+            fetch(
+              'https://script.google.com/macros/s/AKfycbwM8H6Ga921WyFDV09i4Dwh3LNCMqa5du3SXiGPXGuh9kivCNQ/exec',
+            )
+              .then(res => res.json())
+              .then(
+              result => {
+                this.books = result
+              },
+              error => {
 
+              },
+            );
+          }
+        })
+    </script>
+    
+    
 </head>
 
-<body class="background_home">
-
-  <!-- Navigation -->
+<body class="background_other">
+ <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-bottom" style="background-color: rgba(255,255,255,0.80);">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"> </a>
@@ -37,16 +56,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index.html">Home
-              <span class="sr-only">(current)</span>
-            </a>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="program.html">Program</a>
+            <a class="nav-link active" href="program.html">Program</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled" href="schedule.html">Schedule</a>
@@ -62,10 +79,29 @@
     </div>
   </nav>
 
-  <!-- Page Content -->
+      <!-- Page Content -->
   <section>
-    <div class="container-fluid">
+    <div class="container-fluid mt-5">
       <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+                <div id="app">
+                <p class="font-weight-bold">{{ message }}</p>
+                 <div class="book" v-for="book in books">
+                  <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">{{book.name}}</h5>
+                        <small>{{book.project}}</small>
+                      </div>
+                      <p class="mb-1">{{book.title}}</p>
+                      <small>{{book.content}}</small>
+                    </a>
+                  </div>
+                  </div>
+                </div>
+          </div>
+          <div class="col-md-2"></div>
 
       </div>
     </div>
@@ -75,6 +111,7 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-</body>
 
+    
+</body>
 </html>
