@@ -17,6 +17,16 @@
   <link href="style.css" rel="stylesheet" charset="utf-8">
     
   <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142183729-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142183729-2');
+</script>
+
 
 </head>
 
@@ -60,7 +70,47 @@
       <div class="row">
           <div class="col-md-2"></div>
           <div class="col-md-8">
-                <p class="font-weight-bold">{{ message }}</p>
+              <div class="d-flex">
+                <p class="font-weight-bold mr-auto">{{ message }}</p>
+              
+              <div class="text-right d-flex justify-content-end">
+                              <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-secondary mb-2" data-toggle="modal" data-target="#exampleModalLong">
+                  特別企画
+                </button>
+                                    </div>
+                  
+                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">特別対談企画 「絶望ーがんじがらめの社会ー」</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                          <div class="text-center">
+                              <img src="img/special_img.png" alt="">
+                          </div>
+                          <p class="mt-3 mb-1" style="line-height: 1em"><font size="-1">2020 年を迎えた今、現代社会、芸術界を取り巻く状況とはどのようなものなのだろうか。三年前本学を退官された、フェスティバル/トーキョーの元ディレクターである市村作知雄氏と本学の社会学者である毛利義孝教授をゲストにお招きし、シンポジウムを通して共に現在の社会と文化、その未来へと眼差しを向けてゆく。日本社会に蔓延する絶望とは何を意味するのだろうか。ポスト絶望はあるのだろうか。</font></p>
+                          <p><font size="-1">ゲスト：市村作知雄元准教授、毛利義孝教授</font></p>
+                      </div>
+                      <div class="modal-footer">
+                         <small class="text-muted"><font size="1">長島確研究室</font></small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                  
+                  
+
+              </div>
+
+                <!-- Modal -->
+
+              
                  <div class="book" v-for="book in books">
                   <div class="list-group">
                     <a class="list-group-item flex-column">
@@ -71,7 +121,7 @@
                         <font class="" size=1>{{book.project}}</font>
                       </div>
                       <p class="mb-2"><bold><font size="4">{{book.title}}</font></bold></p>
-                      <p class="mb-1" style="line-height: 1em"><font size="-1">{{ book.description }}</p>
+                      <p class="mb-1" style="line-height: 1em"><font size="-1">{{ book.description }}</font></p>
                       <small class="text-muted"><font size="1">{{book.content}}</font></small>
                     </a>
                   </div>
