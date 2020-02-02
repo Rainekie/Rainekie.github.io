@@ -17,13 +17,15 @@
   <link href="style.css" rel="stylesheet" charset="utf-8">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142183729-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
 
-  gtag('config', 'UA-142183729-2');
-</script>
+          gtag('config', 'UA-142183729-2');
+        </script>
+    
+
 
     
 </head>
@@ -79,11 +81,32 @@
                     <a class="nav-link text-reset" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">2/9(日)</a>
                   </li>
                 </ul>
+              
                 <div class="tab-content" id="myTabContent">
                     <!--2/7(金)-->
                   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                     <div class="text-center">
-                        <img src="img/fri.jpg" class="img-fluid" alt="Responsive image">
+                        <img src="img/fri.jpg" class="img-fluid" usemap="#ImageMap_fri" alt="friday schedule">
+                        <map name="ImageMap_fri">
+                           <area shape="rect" coords="260,1072,444,1118" href="javascript:alert( 'white' )" alt="test" />
+                           <area shape="rect" coords="262,1310,441,1375" href="#" alt="test" />
+                           <area shape="rect" coords="253,1471,442,1516" href="#" alt="test" />
+                           <area shape="rect" coords="457,205,586,840" href="#" alt="test" />
+                           <area shape="rect" coords="462,997,592,1626" href="#" alt="test" />
+                           <area shape="rect" coords="608,201,739,473" href="#" alt="test" />
+                           <area shape="rect" coords="611,561,744,877" href="#" alt="test" />
+                           <area shape="rect" coords="614,994,746,1632" href="#" alt="test" />
+                           <area shape="rect" coords="761,279,898,364" href="#" alt="test" />
+                           <area shape="rect" coords="764,398,896,485" href="#" alt="test" />
+                           <area shape="rect" coords="760,520,897,641" href="#" alt="test" />
+                           <area shape="rect" coords="763,679,895,761" href="#" alt="test" />
+                           <area shape="rect" coords="762,797,897,881" href="#" alt="test" />
+                           <area shape="rect" coords="763,916,896,1039" href="#" alt="test" />
+                           <area shape="rect" coords="764,1076,896,1157" href="#" alt="test" />
+                           <area shape="rect" coords="762,1196,898,1316" href="#" alt="test" />
+                           <area shape="rect" coords="763,1348,898,1434" href="#" alt="test" />
+                           <area shape="rect" coords="763,1469,897,1594" href="#" alt="test" />
+                         </map>
                     </div>
                     </div>
                     <!--2/8(土)-->
@@ -111,6 +134,15 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+    
+<script>
+jQuery(function( $ ) {
+  $('img[usemap]').rwdImageMaps();
+});
+</script>
 
 
     
