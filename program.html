@@ -4,7 +4,7 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
+  <meta name="description" content="この春に｢音楽学部：音楽環境創造科｣を卒業、｢大学院：音楽音響創造・芸術環境創造｣を修了する学生たちが、本学で学んだ成果を制作作品・研究論文として発表します。音楽制作/アートマネジメント/音響制作/舞台芸術/文化研究/音響心理研究  以上6つの専攻に分かれ、一人ひとりが描いてきた成長の軌跡とその集大成を、ぜひご覧ください！">
   <meta name="author" content="Rai Sato">
 
   <title>音環卒展2020</title>
@@ -40,7 +40,7 @@
             <a class="nav-link active" href="program.html">Program</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="schedule.html">Schedule</a>
+            <a class="nav-link" href="schedule.html">Schedule</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="access.html">Access</a>
@@ -64,14 +64,14 @@
                  <div class="book" v-for="book in books">
                   <div class="list-group">
                     <a class="list-group-item flex-column">
-                    <p class="mb-0"><font size=1>作品番号:</font> 1</p>
+                    <p class="mb-0"><font size=1>作品番号:</font> {{ book.number }}</p>
                     <hr class="mt-0 mb-3">
                       <div class="d-flex w-100 justify-content-between">
                         <h6 class="mb-2">{{book.name}}</h6>
                         <font class="" size=1>{{book.project}}</font>
                       </div>
                       <p class="mb-2"><bold><font size="4">{{book.title}}</font></bold></p>
-                      <p class="mb-1" style="line-height: 1em"><font size="-1">ヘッドホン使用時、その遮音性能の違いによって外部の音のうるささに差が生じるのか。更に、音楽聴取時に周囲の音をうるさく感じにくいヘッドホンとは具体的にどのような物であるのか。 これらの事柄を明らかにするため測定と主観評価実験を行った。 結果、遮音性能の違いによって外部の音のうるささの印象に有意な差が見られ、特定の周波数帯域の遮音に優れる機種は周囲の騒音に対してうるささを感じにくいという傾向が見られた。</p>
+                      <p class="mb-1" style="line-height: 1em"><font size="-1">{{ book.description }}</p>
                       <small class="text-muted"><font size="1">{{book.content}}</font></small>
                     </a>
                   </div>
